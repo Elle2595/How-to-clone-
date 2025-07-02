@@ -1,14 +1,116 @@
+/* Science/Medical Themed Navbar CSS */
 body {
-  background-color: lightblue;
+  background-color: #f0f8ff; /* light science blue */
   font-family: Arial, sans-serif;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: darkblue;
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #004080; /* dark medical blue */
+  padding: 0 20px;
+  position: relative;
+  height: 60px;
 }
 
-p {
-  color: black;
-  font-size: 18px;
+.navbar-brand {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  position: relative;
+}
+
+.navbar-menu a {
+  display: block;
+  color: #ffffff;
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.navbar-menu a:hover,
+.dropdown:hover .dropbtn {
+  background: #66b2ff; /* hover light blue */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #0059b3; /* dropdown background */
+  min-width: 160px;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #3399ff; /* dropdown link hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger menu styles */
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-icon {
+  display: none;
+  font-size: 2em;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    background: #004080;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: none;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+  }
+
+  .navbar-toggle:checked + .navbar-icon + .navbar-menu {
+    display: flex;
+  }
+
+  .navbar-icon {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: static;
+    top: auto;
+    left: auto;
+  }
 }
