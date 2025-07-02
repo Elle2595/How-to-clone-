@@ -2,39 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Styled Page</title>
-  <style>
-    /* Put your CSS styles here */
-    .navbar {
-      /* example styles */
-    }
-    /* Add your navbar CSS here */
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curious Science</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-brand">Science</div>
-    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
-    <label for="navbar-toggle" class="navbar-icon">&#9776;</label>
-    <ul class="navbar-menu">
-      <li><a href="#home">Home</a></li>
-      <li class="dropdown">
-        <a href="#topics" class="dropbtn">Topics</a>
-        <div class="dropdown-content">
-          <a href="#biology">Biology</a>
-          <a href="#anatomy">Anatomy</a>
-          <a href="#conditions">Conditions</a>
-        </div>
-      </li>
-      <li><a href="#about">About me </a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+  <!-- Navbar with Avatar and Dropdown -->
+  <nav class="gm-navbar">
+    <div class="gm-container">
+      <div class="gm-brand">GeekyMedics</div>
+      <input type="checkbox" id="gm-toggle" class="gm-toggle" />
+      <label for="gm-toggle" class="gm-hamburger">&#9776;</label>
+      <ul class="gm-menu">
+        <li><a href="#home">Home</a></li>
+        <li class="gm-dropdown">
+          <a href="#guides" class="gm-dropbtn">Guides</a>
+          <div class="gm-dropdown-content">
+            <a href="#clinical">Clinical</a>
+            <a href="#osce">OSCE</a>
+            <a href="#anatomy">Anatomy</a>
+          </div>
+        </li>
+        <li><a href="#quizzes">Quizzes</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="gm-avatar-dropdown">
+          <a href="#" class="gm-avatar-link">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User Avatar" class="gm-avatar-img" />
+          </a>
+          <div class="gm-avatar-dropdown-content">
+            <a href="#profile">Profile</a>
+            <a href="#settings">Settings</a>
+            <a href="#logout">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <main>
     <h1>Welcome to Curious Science</h1>
     <p>Easy science for everyone!</p>
   </main>
+
 </body>
 </html>
