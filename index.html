@@ -5,54 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Styled Page</title>
   <style>
-    body {
-      background-color: yellow;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav {
-      background-color: darkblue;
-      padding: 10px;
-    }
-
-    .navbar {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar li {
-      margin: 0 15px;
-    }
-
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <ul class="navbar">
+    <body>
+  <nav class="navbar">
+    <div class="navbar-brand">Curious Science</div>
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="navbar-icon">&#9776;</label>
+    <ul class="navbar-menu">
       <li><a href="#home">Home</a></li>
+      <li class="dropdown">
+        <a href="#topics" class="dropbtn">Topics</a>
+        <div class="dropdown-content">
+          <a href="#biology">Biology</a>
+          <a href="#anatomy">Anatomy</a>
+          <a href="#conditions">Conditions</a>
+        </div>
+      </li>
       <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Your other content can go here -->
   <main>
     <h1>Welcome to Curious Science</h1>
-    <p>This is a science website full of fun and helpful info!</p>
+    <p>Easy science for everyone!</p>
   </main>
-</body>
-</html>
+</bod
