@@ -1,50 +1,187 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Where Science is made simple </title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Medical Discoveries & Rare Diseases</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f8f9fa; }
+    .translate-bar { background: #222; color: #fff; padding: 8px 0; text-align: right; }
+    .navbar { background: #007bff; display: flex; align-items: center; padding: 0 20px; }
+    .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    .navbar li { position: relative; }
+    .navbar > ul > li { margin-right: 30px; }
+    .navbar a { color: #fff; text-decoration: none; padding: 18px 12px; display: block; }
+    .navbar li:hover > a, .navbar a.active { background: #0056b3; }
+    .navbar .dropdown { display: none; position: absolute; background: #007bff; min-width: 180px; z-index: 1; }
+    .navbar li:hover .dropdown { display: block; }
+    .navbar .dropdown li { margin: 0; }
+    .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+    .home-images { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
+    .home-images img { width: 200px; height: 140px; object-fit: cover; border-radius: 6px; }
+    h1, h2 { color: #007bff; }
+    .az-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .az-list a { background: #e9ecef; color: #007bff; padding: 6px 12px; border-radius: 4px; text-decoration: none; }
+    .az-list a:hover { background: #007bff; color: #fff; }
+    @media (max-width: 700px) {
+       .container { padding: 10px; }
+      .navbar ul { flex-direction: column; }
+      .navbar > ul > li { margin-right: 0; }
+    }
+  </style>
+  <!-- Google Translate widget -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
 </head>
 <body>
-
-  <!-- Navbar with Avatar and Dropdown -->
-  <nav class="gm-navbar">
-    <div class="gm-container">
-      <div class="gm-brand">Global science frontiers</div>
-      <input type="checkbox" id="gm-toggle" class="gm-toggle" />
-      <label for="gm-toggle" class="gm-hamburger">&#9776;</label>
-      <ul class="gm-menu">
-        <li><a href="#home">Home</a></li>
-        <li class="gm-dropdown">
-          <a href="#guides" class="gm-dropbtn">Topics</a>
-          <div class="gm-dropdown-content">
-            <a href="#clinical">Europe</a>
-            <a href="#osce">Asia</a>
-            <a href="#anatomy">Africa</a>
-          </div>
-        </li>
-        <li><a href="#quizzes">Charities</a></li>
-        <li><a href="#videos">New discoveries</a></li>
-        <li><a href="#about">About me </a></li>
-        <li class="gm-avatar-dropdown">
-          <a href="#" class="gm-avatar-link">
-            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User Avatar" class="gm-avatar-img" />
-          </a>
-          <div class="gm-avatar-dropdown-content">
-            <a href="#profile">Profile</a>
-            <a href="#settings">Settings</a>
-            <a href="#logout">Membership subscription</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <div class="translate-bar">
+    <span id="google_translate_element"></span>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+       <li><a href="#about">About me</a></li>
+      <li>
+        <a href="#discoveries">Discoveries</a>
+        <ul class="dropdown">
+          <li><a href="#discoveries-africa">Africa</a></li>
+          <li><a href="#discoveries-asia">Asia</a></li>
+          <li><a href="#discoveries-south-america">South America</a></li>
+          <li><a href="#discoveries-middle-east">Middle East</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#rare-diseases">Rare Diseases</a>
+        <ul class="dropdown">
+          <!-- A-Z subcategories -->
+          <li><a href="#rare-a">A</a></li>
+          <li><a href="#rare-b">B</a></li>
+          <li><a href="#rare-c">C</a></li>
+          <li><a href="#rare-d">D</a></li>
+          <li><a href="#rare-e">E</a></li>
+          <li><a href="#rare-f">F</a></li>
+          <li><a href="#rare-g">G</a></li>
+          <li><a href="#rare-h">H</a></li>
+          <li><a href="#rare-i">I</a></li>
+          <li><a href="#rare-j">J</a></li>
+          <li><a href="#rare-k">K</a></li>
+          <li><a href="#rare-l">L</a></li>
+          <li><a href="#rare-m">M</a></li>
+          <li><a href="#rare-n">N</a></li>
+          <li><a href="#rare-o">O</a></li>
+          <li><a href="#rare-p">P</a></li>
+          <li><a href="#rare-q">Q</a></li>
+          <li><a href="#rare-r">R</a></li>
+          <li><a href="#rare-s">S</a></li>
+          <li><a href="#rare-t">T</a></li>
+          <li><a href="#rare-u">U</a></li>
+          <li><a href="#rare-v">V</a></li>
+          <li><a href="#rare-w">W</a></li>
+          <li><a href="#rare-x">X</a></li>
+          <li><a href="#rare-y">Y</a></li>
+          <li><a href="#rare-z">Z</a></li>
+        </ul>
+      </li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
   </nav>
-
-  <main>
-    <h1>Welcome to Global Science frontiers</h1>
-    <p>Easy science for everyone!</p>
-  </main>
-
+  <div class="container" id="home">
+    <h1>Welcome to Medical Discoveries & Rare Diseases</h1>
+    <p>Explore medical discoveries from around the world and learn about rare diseases from A to Z.</p>
+    <div class="home-images">
+      <!-- Replace src with your own images -->
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Medical Discovery 1">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Medical Discovery 2">
+      <img src="https://images.unsplash.com/photo-1519494080410-f9aa8f52f1e1?auto=format&fit=crop&w=400&q=80" alt="Medical Discovery 3">
+    </div>
+  </div>
+  <div class="container" id="about" style="display:none;">
+    <h2>About Me</h2>
+    <p><!-- Write about yourself here --></p>
+  </div>
+  <div class="container" id="discoveries-africa" style="display:none;">
+    <h2>Discoveries - Africa</h2>
+    <p><!-- Write your blog about discoveries in Africa here --></p>
+  </div>
+  <div class="container" id="discoveries-asia" style="display:none;">
+    <h2>Discoveries - Asia</h2>
+     <p><!-- Write your blog about discoveries in Asia here --></p>
+  </div>
+  <div class="container" id="discoveries-south-america" style="display:none;">
+    <h2>Discoveries - South America</h2>
+    <p><!-- Write your blog about discoveries in South America here --></p>
+  </div>
+  <div class="container" id="discoveries-middle-east" style="display:none;">
+    <h2>Discoveries - Middle East</h2>
+    <p><!-- Write your blog about discoveries in the Middle East here --></p>
+  </div>
+  <div class="container" id="rare-diseases" style="display:none;">
+    <h2>Rare Diseases</h2>
+    <div class="az-list">
+      <!-- A-Z links -->
+       <a href="#rare-a">A</a><a href="#rare-b">B</a><a href="#rare-c">C</a><a href="#rare-d">D</a>
+      <a href="#rare-e">E</a><a href="#rare-f">F</a><a href="#rare-g">G</a><a href="#rare-h">H</a>
+      <a href="#rare-i">I</a><a href="#rare-j">J</a><a href="#rare-k">K</a><a href="#rare-l">L</a>
+      <a href="#rare-m">M</a><a href="#rare-n">N</a><a href="#rare-o">O</a><a href="#rare-p">P</a>
+      <a href="#rare-q">Q</a><a href="#rare-r">R</a><a href="#rare-s">S</a><a href="#rare-t">T</a>
+      <a href="#rare-u">U</a><a href="#rare-v">V</a><a href="#rare-w">W</a><a href="#rare-x">X</a>
+      <a href="#rare-y">Y</a><a href="#rare-z">Z</a>
+    </div>
+    <p>Select a letter to explore rare diseases alphabetically.</p>
+  </div>
+  <!-- Rare Diseases A-Z sections -->
+  <div class="container" id="rare-a" style="display:none;">
+    <h2>Rare Diseases - A</h2>
+    <p><!-- List and describe rare diseases starting with A here --></p>
+  </div>
+  <!-- Repeat for B-Z as needed -->
+  <div class="container" id="resources" style="display:none;">
+    <h2>Resources</h2>
+    <p><!-- Add your resources here --></p>
+  </div>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    // Simple SPA navigation
+    const sections = [
+      "home", "about", "discoveries-africa", "discoveries-asia", "discoveries-south-america", "discoveries-middle-east",
+      "rare-diseases", "resources",
+      // Rare diseases A-Z
+      ...Array.from({length: 26}, (_, i) => `rare-${String.fromCharCode(97 + i)}`)
+    ];
+    function showSection(id) {
+      sections.forEach(sec => {
+        const el = document.getElementById(sec);
+        if (el) el.style.display = (sec === id) ? "block" : "none";
+      });
+      // Set active nav link
+      document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('active'));
+      const nav = document.querySelector(`.navbar a[href="#${id}"]`);
+      if (nav) nav.classList.add('active');
+       }
+    // Handle navigation
+    document.querySelectorAll('.navbar a').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href').replace('#', '');
+        if (sections.includes(hash)) {
+          e.preventDefault();
+          showSection(hash);
+          history.pushState(null, '', '#' + hash);
+        }
+      });
+    });
+    // Show section based on URL hash
+    window.addEventListener('load', () => {
+      const hash = location.hash.replace('#', '');
+      showSection(sections.includes(hash) ? hash : 'home');
+    });
+    window.addEventListener('popstate', () => {
+      const hash = location.hash.replace('#', '');
+      showSection(sections.includes(hash) ? hash : 'home');
+    });
+  </script>
 </body>
 </html>
